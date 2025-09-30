@@ -1,0 +1,79 @@
+body {
+  background-color: #2c2948;
+}
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+  top: 45px;
+}
+.Screen {
+  background-color: aliceblue;
+  height: 30px;
+  width: 500px;
+  box-shadow: 0 0 12px 3px #b2aed2;
+  clip-path: ellipse(70% 100% at 50% 0%);
+}
+.Screen > p {
+  font-weight: bold;
+  text-align: center;
+  color: #5e598f;
+  margin: 6px;
+}
+
+.seat-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.seatRow {
+  display: flex;
+  gap: 5px;
+}
+.seat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat:hover {
+  .Top,
+  .bottom {
+    background-color: rgb(47, 75, 130);
+  }
+}
+
+.Top,.bottom {
+  background-color: #7d79a1;
+  margin: 0px;
+  padding: 0px;
+}
+
+.Top {
+  height: 10px;
+  width: 25px;
+  border-radius: 25% 25% 0% 0%;
+}
+.bottom {
+  height: 23px;
+  width: 35px;
+  border-radius: 15%;
+  top: -1px;
+}
+.row-name {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #e7e6f0;
+}
+.seat:active{
+  .Top,.bottom{
+  background-color:#e5a074;
+  }
+}
+.seat.selected .Top,.seat.selected .bottom {
+  background-color: #d97434;
+}
